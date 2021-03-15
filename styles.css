@@ -281,7 +281,7 @@ input:focus {
     position: relative;
 }
 
-.nav-pills {
+.nav-pills-blog {
     border: 1px solid #6A798E;
     color: #6A798E;
     padding: 10px;
@@ -291,7 +291,7 @@ input:focus {
     cursor: pointer;
 }
 
-.nav-pills.active {
+.nav-pills-blog.active {
     background: linear-gradient(to top right, #72A735, #029643);
     color: white;
 }
@@ -352,6 +352,10 @@ input:focus {
     }
     .post-footer {
         font-size: 12px;
+    }
+    .nav-pills-blog {
+        margin: 5px;
+        display: inline-block;
     }
 }
 
