@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html,
+body {
+    scroll-behavior: smooth;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #1C2127;
+    color: #f8f8f6;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.pre-nav p,
+a {
+    color: #72A735;
+}
+
+.heading {
+    font-weight: bold;
+    font-size: 42px;
+}
+
+.sub-heading {
+    font-size: 26px;
+    font-weight: 100;
+}
+
+.small-heading {
+    font-weight: bold;
+    font-size: 34px;
+}
+
+.border-bottom-dark {
+    border-bottom: 1px solid #303D50;
+}
+
+.border-dark {
+    border: 1px solid #303D50;
+}
+
+.color-white {
+    color: #F8F8F6 !important;
+}
+
+.bg-grad {
+    background: linear-gradient(to top right, #72A735, #029643);
+}
+
+.bg-input-grey {
+    background: #303D50 !important;
+}
+
+input,
+textarea {
+    background: transparent !important;
+    color: #72A735;
+    font-weight: bold;
+    font-size: 26px;
+    border: 0;
+    box-shadow: 0;
+}
+
+textarea {
+    width: 100%;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox */
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input:focus,
+input:active {
+    outline: 0;
+    border: 0;
+}
+
+.pre-nav p {
+    margin-bottom: 0px !important;
+}
+
+.pre-nav {
+    background: #272D39;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #1C2127;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.4s all ease;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #F8F8F6;
+    transition: 0.4s all ease;
+}
+
+.nav-link {
+    text-transform: uppercase;
+    color: #F8F8F6 !important;
+}
+
+.nav-link:hover,
+.nav-item.active .nav-link {
+    color: #029643 !important;
+}
+
+.btn.bg-grad {
+    border: 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #F8F8F6;
+    min-width: 200px;
+    min-height: 50px;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+input:focus {
+    border: 0px !important;
+    outline: 0;
+}
+
+.nav-pills .nav-link {
+    background: transparent !important;
+    border: 0;
+    outline: 0;
+}
+
+.nav-pills .nav-link.active {
+    background: transparent !important;
+    border: 0;
+    outline: 0;
+    color: #029643 !important;
+    transition: 0.4s all ease;
+}
+
+.nav-pills .nav-link.active:after {
+    content: "";
+    background: #029643;
+    height: 2px;
+    width: 100%;
+    display: block;
+    border-radius: 5%;
+    margin-top: 10px;
+    transition: 0.4s all ease;
+}
+
+.very-small-text {
+    font-size: 10px;
+    margin-bottom: 0px;
+    font-weight: light;
+}
+
+.post-input {
+    border-left: 1px solid #029643;
+    padding-left: 10px;
+}
+
+.post-input input {
+    color: #72A735;
+    font-weight: bold;
+    font-size: 26px;
+    background: transparent !important;
+    border: 0;
+    width: 100%;
+}
+
+.capsule p {
+    margin-bottom: 0;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.4s background ease;
+}
+
+.capsule p.active {
+    background: linear-gradient(to top right, #72A735, #029643);
+    border-radius: 25px;
+    color: white;
+}
+
+.capsule {
+    font-size: 12px;
+    border-radius: 25px;
+    border: 1px solid #6A798E;
+    width: fit-content;
+    color: #6A798E;
+}
+
+#navbarSupportedContent {
+    background-color: #272d39 !important;
+    padding-left: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.card {
+    background-color: #303D50;
+    border-radius: 14px;
+}
+
+.client-img {
+    position: absolute;
+    top: 7%;
+    left: 34.5%;
+}
+
+.carousel-indicators {
+    bottom: -50px;
+}
+
+.quotes {
+    position: absolute;
+    top: 30px;
+    left: -20px;
+}
+
+.footer {
+    background-color: #272D39;
+}
+
+.footer-heading {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+.footer-link {
+    color: #6A798E;
+    font-size: 22px;
+}
+
+.spacer {
+    padding-top: 100px !important;
+}
+
+.ui-autocomplete {
+    background: #F8F8F6;
+    color: #303D50;
+    list-style-type: none;
+    width: fit-content;
+    padding: 20px;
+    min-width: 150px;
+    max-height: 200px;
+    overflow-y: scroll;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.ui-menu-item {
+    border-bottom: 1px solid #dadee6;
+}
+
+.image-container {
+    position: relative;
+}
+
+.nav-pills {
+    border: 1px solid #6A798E;
+    color: #6A798E;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 25px;
+    transition: 0.4s all ease;
+    cursor: pointer;
+}
+
+.nav-pills.active {
+    background: linear-gradient(to top right, #72A735, #029643);
+    color: white;
+}
+
+.card-img-top {
+    max-height: 200px;
+    border-radius: 1rem !important;
+}
+
+.btn-primary {
+    color: #72A735 !important;
+    border: 1px solid #72A735 !important;
+    background-color: transparent !important;
+}
+
+.card-text {
+    color: #6A798E;
+}
+
+.sidebar .card {
+    background-color: transparent !important;
+    border: 1px solid #303D50;
+}
+
+.sidebar .card-img-top {
+    max-height: 150px !important;
+}
+
+@media (max-width: 1200px) {
+    .navbar-toggler-icon {
+        color: #F8F8F6;
+    }
+    .post-input {
+        border-left: 1px solid #029643;
+        padding-left: 10px;
+    }
+    .post-input input,
+    input {
+        font-size: 14px;
+    }
+    .heading,
+    .small-heading {
+        font-size: 20px;
+    }
+    .sub-heading {
+        font-size: 18px;
+    }
+    .spacer {
+        padding-top: 50px !important;
+    }
+    .footer-heading,
+    .footer-link {
+        font-size: 16px;
+    }
+    .footer .btn.bg-grad {
+        font-size: 14px;
+        min-width: 100%;
+    }
+    .post-footer {
+        font-size: 12px;
+    }
+}
+
+
+/* Testing ScrollMagic */
+
+#banner {
+    opacity: 0;
+    -webkit-transform: translateX(-40px);
+    -moz-transform: translateX(-40px);
+    -ms-transform: translateX(-40px);
+    -o-transform: translateX(-40px);
+    transform: translateX(-40px);
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -ms-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+}
+
+#banner.visible {
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+}
+
+.scrollMagic {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.scrollMagic.visible {
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+}
+
+
+/* Stepper */
+
+.steps {
+    width: 100%;
+}
+
+.step {
+    height: 50px;
+    width: 50px;
+    border: 1px solid #029643;
+    border-radius: 50%;
+    font-size: 20px;
+    background-color: #1C2127;
+    z-index: 1;
+}
+
+.step.active {
+    color: white;
+    background: linear-gradient(to top right, #72A735, #029643);
+}
+
+.step p {
+    margin-bottom: 0px;
+}
+
+.line,
+.line-worked {
+    width: 90%;
+    height: 2px;
+    position: absolute;
+    top: 25px;
+    background-color: #272D39;
+    z-index: 0;
+}
+
+.line-worked {
+    background-color: #72A735;
+    width: 1%;
+}
+
+.stepper .tab>p {
+    font-size: 14px;
+    color: #6A798E;
+}
