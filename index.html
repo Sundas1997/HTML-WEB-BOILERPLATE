@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="styles.css" />
-
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <title>Changeangel - Home</title>
 </head>
 
@@ -132,9 +132,12 @@
                                     </div>
                                     <div class="post-input">
                                         <p class="very-small-text ">CURRENCY</p>
-                                        <input class="form-select pb-0 mb-0" style="text-transform: uppercase" id="send" type="text" placeholder="BTC" />
+                                        <select id="select2_example" class="currency form-select pb-0 mb-0" style="width:100%;text-transform: uppercase">
+                                            
+                                        </select>
                                     </div>
                                 </div>
+
                                 <div class="d-flex align-items-center">
                                     <img src="imgs/lock.png" alt="" height="12px" />
                                     <p class="very-small-text ml-2">
@@ -148,7 +151,9 @@
                                     </div>
                                     <div class="post-input">
                                         <p class="very-small-text ">CURRENCY</p>
-                                        <input class="form-select pb-0 mb-0" style="text-transform: uppercase" id="receive" type="text" placeholder="ETH" />
+                                        <select id="only_example" class="currency form-select pb-0 mb-0" style="width:100%;text-transform: uppercase">
+                                            
+                                        </select>
                                     </div>
                                 </div>
                                 <button class="btn bg-grad my-2 my-sm-0 w-100" type="submit">
@@ -165,7 +170,142 @@
                                     </div>
                                     <div class="post-input">
                                         <p class="very-small-text ">CURRENCY</p>
-                                        <input class="form-select pb-0 mb-0" style="text-transform: uppercase" id="send-2" type="text" placeholder="BTC" />
+                                        <select id="2" name="currency-2" class="currency form-select pb-0 mb-0" style="text-transform: uppercase" type="text" placeholder="BTC">
+                                            <option id="btc">
+                                                Bitcoin
+                                              </option>
+                                       
+                                              <option id="dgb">
+                                               DigiByte
+                                              </option>
+                                       
+                                              <option id="eth">
+                                               Ethereum
+                                              </option>
+                                       
+                                              <option id="ltc">
+                                                Litecoin
+                                              </option>
+                                       
+                                              <option id="aave">
+                                              Aave
+                                             </option>
+                                       
+                                              <option id="aion">
+                                                Aion
+                                              </option>
+                                       
+                                              <option id="ampl">
+                                               Ampleforth
+                                              </option>
+                                       
+                                              <option id="atom">
+                                               Atom
+                                              </option>
+                                       
+                                              <option id="ada">
+                                            Cardano
+                                             </option>
+                                       
+                                              <option id="bat">
+                                               Basic Attention Token
+                                             </option>
+                                       
+                                              <option id="bch">
+                                               Bitcoin Cash
+                                             </option>
+                                       
+                                              <option id="bsv">
+                                              Bitcoin SV
+                                             </option>
+                                       
+                                             <option id="bnb">
+                                               Binance Coin
+                                             </option>
+                                       
+                                             <option id="bnt">
+                                               Bancor Network Token
+                                             </option>
+                                       
+                                             <option id="busd">
+                                              BUSD
+                                             </option>
+                                       
+                                             <option id="link">
+                                               Chainlink
+                                             </option>
+                                       
+                                             <option id="celr">
+                                               Celer Network
+                                             </option>
+                                       
+                                             <option id="crv">
+                                               Curve DAO
+                                             </option>
+                                       
+                                             <option id="dai">
+                                                Dai
+                                             </option>
+                                             <option id="dcr" >
+                                                 Decred
+                                             </option>
+                                             <option id="dia">
+                                                DIA
+                                             </option>
+                                              <option id="dnt">District0x</option>  
+                                              <option id="doge">Dogecoin</option>
+                                              <option id="etc">Eth Classic</option>  
+                                              <option id="evx">Everex</option>
+                                              <option id="fil">Filecoin</option>
+                                              <option id="flo"> Florin</option>
+                                              <option id="hive">Hive</option>
+                                              <option id="zen">Horizen</option>
+                                              <option id="grs">Groestlcoin</option>
+                                              <option id="gvt">Genesis Vision</option>
+                                              <option id="icx">Icon</option>
+                                              <option id="kmd">Komodo</option>
+                                              <option id="knc">Kyber Network</option>
+                                              <opton id="lto">LTO Network</opton>
+                                            <option id="nano">Nano</option>
+                                               <option id="nav">NAV Coin</option>
+                                               <option id="nebl">Neblio</option>
+                                                <option id="nxs">Nexus</option>
+                                               <option id="neo">NEO</option>
+                                               <option id="xem">NEM</option>
+                                               <option id="omg"> OmiseGO</option>
+                                               <option id="ont">Ontology</option>
+                                               <option id="pax">Paxos Standard</option>
+                                               <option id="plr">Pillar</option>
+                                               <option id="pivx">Pivx</option>
+                                               <option id="dot">Polkadot</option>
+                                               <option id="pot">Potcoin</option>
+                                                <option id="powr">Power Ledger</option>
+                                                <option id="ppt">Populous</option>
+                                                <option id="qtum">Qtum Ignition</option>
+                                                <option id="rvn">Ravencoin</option>
+                                                <option id="renbtc">RenBTC</option>
+                                                <option id="ren">Republic Protocol</option>
+                                                <option id="xrp">Ripple</option>
+                                                <option id="sc">Siacoin</option>
+                                                <option id="xlm">Stellar Lumens</option>
+                                                <option id="steem">Steem</option>
+                                                <option id="strax">Stratis</option>
+                                               <option id="sxp">Swipe</option>
+                                                <option id="snx">Synthetix Network Token</option>
+                                               <option id="trb">Tellor</option>
+                                               <option id="xtz">Tezos</option>
+                                                <option id="tfuel">Theta Fuel</option>
+                                               <option id="theta">Theta</option>
+                                               <option id="tomo">TomoChain</option>
+                                               <option id="tusd">True USD</option>
+                                               <option id="trx">Tron</option>
+                                               <option id="usdc">USDC</option>
+                                               <option id="usdt">USDT-ERC20</option>
+                                               <option id="wbtc">Wrapped Bitcoin</option>
+                                                <option id="zil">Zilliqa</option>
+                                                <option id="zrx">0x Protocol Token</option>
+                                                
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center">
@@ -181,7 +321,142 @@
                                     </div>
                                     <div class="post-input">
                                         <p class="very-small-text ">CURRENCY</p>
-                                        <input class="form-select pb-0 mb-0" style="text-transform: uppercase" id="receive-2" type="text" placeholder="ETH" />
+                                        <select id="3" name="currency-3" class="currency form-select pb-0 mb-0" style="text-transform: uppercase" type="text" placeholder="BTC">
+                                            <option id="btc">
+                                                Bitcoin
+                                              </option>
+                                       
+                                              <option id="dgb">
+                                               DigiByte
+                                              </option>
+                                       
+                                              <option id="eth">
+                                               Ethereum
+                                              </option>
+                                       
+                                              <option id="ltc">
+                                                Litecoin
+                                              </option>
+                                       
+                                              <option id="aave">
+                                              Aave
+                                             </option>
+                                       
+                                              <option id="aion">
+                                                Aion
+                                              </option>
+                                       
+                                              <option id="ampl">
+                                               Ampleforth
+                                              </option>
+                                       
+                                              <option id="atom">
+                                               Atom
+                                              </option>
+                                       
+                                              <option id="ada">
+                                            Cardano
+                                             </option>
+                                       
+                                              <option id="bat">
+                                               Basic Attention Token
+                                             </option>
+                                       
+                                              <option id="bch">
+                                               Bitcoin Cash
+                                             </option>
+                                       
+                                              <option id="bsv">
+                                              Bitcoin SV
+                                             </option>
+                                       
+                                             <option id="bnb">
+                                               Binance Coin
+                                             </option>
+                                       
+                                             <option id="bnt">
+                                               Bancor Network Token
+                                             </option>
+                                       
+                                             <option id="busd">
+                                              BUSD
+                                             </option>
+                                       
+                                             <option id="link">
+                                               Chainlink
+                                             </option>
+                                       
+                                             <option id="celr">
+                                               Celer Network
+                                             </option>
+                                       
+                                             <option id="crv">
+                                               Curve DAO
+                                             </option>
+                                       
+                                             <option id="dai">
+                                                Dai
+                                             </option>
+                                             <option id="dcr" >
+                                                 Decred
+                                             </option>
+                                             <option id="dia">
+                                                DIA
+                                             </option>
+                                              <option id="dnt">District0x</option>  
+                                              <option id="doge">Dogecoin</option>
+                                              <option id="etc">Eth Classic</option>  
+                                              <option id="evx">Everex</option>
+                                              <option id="fil">Filecoin</option>
+                                              <option id="flo"> Florin</option>
+                                              <option id="hive">Hive</option>
+                                              <option id="zen">Horizen</option>
+                                              <option id="grs">Groestlcoin</option>
+                                              <option id="gvt">Genesis Vision</option>
+                                              <option id="icx">Icon</option>
+                                              <option id="kmd">Komodo</option>
+                                              <option id="knc">Kyber Network</option>
+                                              <opton id="lto">LTO Network</opton>
+                                            <option id="nano">Nano</option>
+                                               <option id="nav">NAV Coin</option>
+                                               <option id="nebl">Neblio</option>
+                                                <option id="nxs">Nexus</option>
+                                               <option id="neo">NEO</option>
+                                               <option id="xem">NEM</option>
+                                               <option id="omg"> OmiseGO</option>
+                                               <option id="ont">Ontology</option>
+                                               <option id="pax">Paxos Standard</option>
+                                               <option id="plr">Pillar</option>
+                                               <option id="pivx">Pivx</option>
+                                               <option id="dot">Polkadot</option>
+                                               <option id="pot">Potcoin</option>
+                                                <option id="powr">Power Ledger</option>
+                                                <option id="ppt">Populous</option>
+                                                <option id="qtum">Qtum Ignition</option>
+                                                <option id="rvn">Ravencoin</option>
+                                                <option id="renbtc">RenBTC</option>
+                                                <option id="ren">Republic Protocol</option>
+                                                <option id="xrp">Ripple</option>
+                                                <option id="sc">Siacoin</option>
+                                                <option id="xlm">Stellar Lumens</option>
+                                                <option id="steem">Steem</option>
+                                                <option id="strax">Stratis</option>
+                                               <option id="sxp">Swipe</option>
+                                                <option id="snx">Synthetix Network Token</option>
+                                               <option id="trb">Tellor</option>
+                                               <option id="xtz">Tezos</option>
+                                                <option id="tfuel">Theta Fuel</option>
+                                               <option id="theta">Theta</option>
+                                               <option id="tomo">TomoChain</option>
+                                               <option id="tusd">True USD</option>
+                                               <option id="trx">Tron</option>
+                                               <option id="usdc">USDC</option>
+                                               <option id="usdt">USDT-ERC20</option>
+                                               <option id="wbtc">Wrapped Bitcoin</option>
+                                                <option id="zil">Zilliqa</option>
+                                                <option id="zrx">0x Protocol Token</option>
+                                                
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="bg-input-grey rounded p-2 my-4 d-flex">
@@ -652,6 +927,8 @@
     <script type="text/javascript" src="scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
     <script type="text/javascript" src="scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
     <script src="js/bodymovin.js"></script>
 
     <script src="script.js"></script>

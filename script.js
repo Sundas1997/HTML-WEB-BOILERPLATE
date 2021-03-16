@@ -1,68 +1,167 @@
+var currencies = [{
+        id: "btc",
+        text: "Bitcoin",
+        selected: true
+    },
+    {
+        id: "dgb",
+        text: "DigiByte",
+    },
+
+    {
+        id: "eth",
+        text: "Ethereum",
+    },
+
+    {
+        id: "ltc",
+        text: "Litecoin",
+    },
+
+    {
+        id: "aave",
+        text: "Aave",
+    },
+
+    {
+        id: "aion",
+        text: "Aion",
+    },
+
+    {
+        id: "ampl",
+        text: "Ampleforth",
+    },
+
+    {
+        id: "atom",
+        text: "Atom",
+    },
+
+    {
+        id: "ada",
+        text: "Cardano",
+    },
+
+    {
+        id: "bat",
+        text: "Basic Attention Token",
+    },
+
+    {
+        id: "bch",
+        text: "Bitcoin Cash",
+    },
+
+    {
+        id: "bsv",
+        text: "Bitcoin SV",
+    },
+    {
+        id: "bnb",
+        text: "Binance Coin",
+    },
+
+    {
+        id: "bnt",
+        text: "Bancor Network Token",
+    },
+
+    {
+        id: "busd",
+        text: "BUSD",
+    },
+
+    {
+        id: "link",
+        text: "Chainlink",
+    },
+
+    {
+        id: "celr",
+        text: "Celer Network",
+    },
+
+    {
+        id: "crv",
+        text: "Curve DAO",
+    },
+
+    {
+        id: "dai",
+        text: "Dai",
+    },
+    {
+        id: "dcr",
+        text: "Decred",
+    },
+    {
+        id: "dia",
+        text: "DIA",
+    },
+    {
+        id: "dnt",
+        text: "District0x",
+    },
+    { id: "doge", text: "Dogecoin" },
+    { id: "etc", text: "Eth Classic" },
+    { id: "evx", text: "Everex" },
+    { id: "fil", text: "Filecoin" },
+    { id: "flo", text: "Florin" },
+    { id: "hive", text: "Hive" },
+    { id: "zen", text: "Horizen" },
+    { id: "grs", text: "Groestlcoin" },
+    { id: "gvt", text: "Genesis Vision" },
+    { id: "icx", text: "Icon" },
+    { id: "kmd", text: "Komodo" },
+    { id: "knc", text: "Kyber Network" },
+    { id: "lto", text: "LTO Network" },
+    { id: "nano", text: "Nano" },
+    { id: "nav", text: "NAV Coin" },
+    { id: "nebl", text: "Neblio" },
+    { id: "nxs", text: "Nexus" },
+    { id: "neo", text: "NEO" },
+    { id: "xem", text: "NEM" },
+    { id: "omg", text: "OmiseGO" },
+    { id: "ont", text: "Ontology" },
+    { id: "pax", text: "Paxos Standard" },
+    { id: "plr", text: "Pillar" },
+    { id: "pivx", text: "Pivx" },
+    { id: "dot", text: "Polkadot" },
+    { id: "pot", text: "Potcoin" },
+    { id: "powr", text: "Power Ledger" },
+    { id: "ppt", text: "Populous" },
+    { id: "qtum", text: "Qtum Ignition" },
+    { id: "rvn", text: "Ravencoin" },
+    { id: "renbtc", text: "RenBTC" },
+    { id: "ren", text: "Republic Protocol" },
+    { id: "xrp", text: "Ripple" },
+    { id: "sc", text: "Siacoin" },
+    { id: "xlm", text: "Stellar Lumens" },
+    { id: "steem", text: "Steem" },
+    { id: "strax", text: "Stratis" },
+    { id: "sxp", text: "Swipe" },
+    { id: "snx", text: "Synthetix Network Token" },
+    { id: "trb", text: "Tellor" },
+    { id: "xtz", text: "Tezos" },
+    { id: "tfuel", text: "Theta Fuel" },
+    { id: "theta", text: "Theta" },
+    { id: "tomo", text: "TomoChain" },
+    { id: "tusd", text: "True USD" },
+    { id: "trx", text: "Tron" },
+    { id: "usdc", text: "USDC" },
+    { id: "usdt", text: "USDT - ERC20" },
+    { id: "wbtc", text: "Wrapped Bitcoin" },
+    { id: "zil", text: "Zilliqa" },
+    { id: "zrx", text: "0x Protocol Token" },
+];
+
 $(document).ready(function() {
     $(function() {
-        var availableTags = [
-            "AUR",
-            "BCC",
-            "BCH",
-            "BTC",
-            "DASH",
-            "DOGE",
-            "EOS",
-            "ETC",
-            "ETH",
-            "GRC",
-            "LTC",
-            "KOI",
-            "MZC",
-            "NEO",
-            "NMC",
-            "POT",
-            "PPC",
-            "TIT",
-            "USDC",
-            "USDT",
-            "VTC",
-            "XEM",
-            "XLM",
-            "XMR",
-            "XPM",
-            "XRP",
-            "XVG",
-            "ZEC"
-        ];
-        var countries = [
-            "INDIA",
-            "PAKISTAN",
-            "CHINA",
-            "IRAN",
-            "IRAQ"
-        ];
-        $("#receive").autocomplete({
-            source: availableTags,
-            minLength: 0
-        }).focus(function() {
-            $(this).autocomplete('search', $(this).val());
-        });
-        $("#send").autocomplete({
-            source: availableTags,
-            minLength: 0
-        }).focus(function() {
-            $(this).autocomplete('search', $(this).val())
-        });
-        $("#receive-2").autocomplete({
-            source: availableTags,
-            minLength: 0
-        }).focus(function() {
-            $(this).autocomplete('search', $(this).val())
-        });
-        $("#send-2").autocomplete({
-            source: availableTags,
-            minLength: 0
-        }).focus(function() {
-            $(this).autocomplete('search', $(this).val())
-        });
+        var countries = ["INDIA", "PAKISTAN", "CHINA", "IRAN", "IRAQ"];
+
         $("#country").autocomplete({
-            source: countries
+            source: countries,
         });
     });
 
@@ -78,7 +177,8 @@ $(document).ready(function() {
         .addTo(controller);
 
     var revealElements = document.getElementsByClassName("scrollMagic");
-    for (var i = 0; i < revealElements.length; i++) { // create a scene for each element
+    for (var i = 0; i < revealElements.length; i++) {
+        // create a scene for each element
         new ScrollMagic.Scene({
                 triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
                 offset: 100, // start a little later
@@ -95,150 +195,92 @@ $(document).ready(function() {
         // add capsule functionality here
     });
 
-    if (document.getElementById('bm')) {
+    if (document.getElementById("bm")) {
         var animation = bodymovin.loadAnimation({
-            container: document.getElementById('bm'),
-            renderer: 'svg',
+            container: document.getElementById("bm"),
+            renderer: "svg",
             loop: true,
             autoplay: true,
-            path: 'json/sell-crypto.json'
+            path: "json/sell-crypto.json",
         });
-
     }
 
-    if (document.getElementById('about')) {
+    if (document.getElementById("about")) {
         var animation2 = bodymovin.loadAnimation({
-            container: document.getElementById('about'),
-            renderer: 'svg',
+            container: document.getElementById("about"),
+            renderer: "svg",
             loop: true,
             autoplay: true,
-            path: 'json/about-anime.json'
+            path: "json/about-anime.json",
         });
     }
 
-
-    if (document.getElementById('about-2')) {
+    if (document.getElementById("about-2")) {
         var animation3 = bodymovin.loadAnimation({
-            container: document.getElementById('about-2'),
-            renderer: 'svg',
+            container: document.getElementById("about-2"),
+            renderer: "svg",
             loop: true,
             autoplay: true,
-            path: 'json/about-2.json'
+            path: "json/about-2.json",
         });
     }
 
-    if (document.getElementById('exchange')) {
+    if (document.getElementById("exchange")) {
         var animation3 = bodymovin.loadAnimation({
-            container: document.getElementById('exchange'),
-            renderer: 'svg',
+            container: document.getElementById("exchange"),
+            renderer: "svg",
             loop: true,
             autoplay: true,
-            path: 'json/transaction.json'
+            path: "json/transaction.json",
         });
     }
-    if (document.getElementById('transaction-done')) {
+    if (document.getElementById("transaction-done")) {
         var animation3 = bodymovin.loadAnimation({
-            container: document.getElementById('transaction-done'),
-            renderer: 'svg',
+            container: document.getElementById("transaction-done"),
+            renderer: "svg",
             autoplay: false,
             loop: true,
-            path: 'json/transaction-complete.json'
+            path: "json/transaction-complete.json",
         });
     }
 
-    $(".nav-pills").on('click', function(e) {
-        $(e.target).toggleClass('active');
-    })
-
+    $(".nav-pills-blog").on("click", function(e) {
+        $(e.target).toggleClass("active");
+    });
 
     var tabs = $(".tab");
     var steps = $(".step");
     var line = $(".line-worked");
     let iterator = 1;
-    $(".next-btn").on('click', function() {
+    $(".next-btn").on("click", function() {
         if (iterator < tabs.length) {
             $(steps[iterator]).addClass("active");
             $(tabs[iterator - 1]).toggleClass("d-none");
             $(tabs[iterator]).toggleClass("d-none");
             var perc = 30 * iterator;
-            $(line).css("width", `${perc}%`)
+            $(line).css("width", `${perc}%`);
             iterator = iterator + 1;
             if (iterator == tabs.length) {
                 animation3.play();
             }
         }
     });
-});
 
-
-
-
-
-$(document).ready(function() {
-
-    var current_fs, next_fs, previous_fs; //fieldsets
-    var opacity;
-
-    $(".next").click(function() {
-
-        current_fs = $(this).parent();
-        next_fs = $(this).parent().next();
-
-        //Add Class Active
-        $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
-
-        //show the next fieldset
-        next_fs.show();
-        //hide the current fieldset with style
-        current_fs.animate({ opacity: 0 }, {
-            step: function(now) {
-                // for making fielset appear animation
-                opacity = 1 - now;
-
-                current_fs.css({
-                    'display': 'none',
-                    'position': 'relative'
-                });
-                next_fs.css({ 'opacity': opacity });
-            },
-            duration: 600
-        });
+    $(".currency").select2({
+        data: currencies,
+        templateResult: function(idioma) {
+            var $span = $(
+                `<div class="row" style=" overflow-x:hidden"><div class="col-2" ><img height="20px" src="https://changeangel.io/images/crypto-icons/${idioma.id}.svg"/></div><div class="col-2" style="padding-left:10px; text-transform:uppercase;">${idioma.id} </div><div class="col-8" style="text-align:right;">${idioma.text}</div></div>`
+            );
+            return $span;
+        },
+        templateSelection: function(idioma) {
+            if (idioma.element) {
+                var $span = $(
+                    `<span class="select2-font-size" style="text-transform: uppercase;">${idioma.id}</span>`
+                );
+            }
+            return $span;
+        },
     });
-
-    $(".previous").click(function() {
-
-        current_fs = $(this).parent();
-        previous_fs = $(this).parent().prev();
-
-        //Remove class active
-        $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
-
-        //show the previous fieldset
-        previous_fs.show();
-
-        //hide the current fieldset with style
-        current_fs.animate({ opacity: 0 }, {
-            step: function(now) {
-                // for making fielset appear animation
-                opacity = 1 - now;
-
-                current_fs.css({
-                    'display': 'none',
-                    'position': 'relative'
-                });
-                previous_fs.css({ 'opacity': opacity });
-            },
-            duration: 600
-        });
-    });
-
-    $('.radio-group .radio').click(function() {
-        $(this).parent().find('.radio').removeClass('selected');
-        $(this).addClass('selected');
-    });
-
-    $(".submit").click(function() {
-        return false;
-    })
-
 });
