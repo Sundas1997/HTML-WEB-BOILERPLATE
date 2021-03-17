@@ -266,8 +266,20 @@ $(document).ready(function() {
         }
     });
 
-    $(".currency").select2({
+    var bginput = $('.exchange-card .bg-input-grey');
+    $(".currency").each(function(index){
+        $(this).select2({
         data: currencies,
+        dropdownCssClass: '.new-dropdown-class',
+        dropdownParent: $(bginput[index]),
+        matcher: function(term, text, option) {
+            if(term.term){
+                if(text.text.toUpperCase().indexOf(term.term.toUpperCase())>=0 || text.id.toUpperCase().indexOf(term.term.toUpperCase())>=0) {return text;}
+                return null;
+            } else{
+                return text;
+            }
+        },
         templateResult: function(idioma) {
             var $span = $(
                 `<div class="row" style=" overflow-x:hidden"><div class="col-2" ><img height="20px" src="https://changeangel.io/images/crypto-icons/${idioma.id}.svg"/></div><div class="col-2" style="padding-left:10px; text-transform:uppercase;">${idioma.id} </div><div class="col-8" style="text-align:right;">${idioma.text}</div></div>`
@@ -282,5 +294,29 @@ $(document).ready(function() {
             }
             return $span;
         },
-    });
+    }).on('select2:open', function(e){
+        $(window).on('scroll', function(){
+            setTimeout(function(){
+            $('.select2-dropdown').css('width', $(bginput[index]).css('width'));
+        $('.bg-input-grey>.select2-container').offset({left: $(bginput[index]).offset().left});
+        }, 0);
+        });
+        $('.select2-search__field').on('keyup keypress blur change',function(){
+            setTimeout(function(){
+            $('.select2-dropdown').css('width', $(bginput[index]).css('width'));
+        $('.bg-input-grey>.select2-container').offset({left: $(bginput[index]).offset().left});
+        }, 0);
+        });
+        setTimeout(function(){
+            $('.select2-dropdown').css('width', $(bginput[index]).css('width'));
+        $('.bg-input-grey>.select2-container').offset({left: $(bginput[index]).offset().left});
+        }, 0);
+    })
+    })
+    
+    
+    
+    
+    
+   
 });

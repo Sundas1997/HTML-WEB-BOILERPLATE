@@ -8,7 +8,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     background: #1C2127;
     color: #f8f8f6;
-    overflow-x: hidden;
+    overflow-x:hidden;
 }
 
 h1,
@@ -357,6 +357,11 @@ input:focus {
 .select2-font-size {
     font-size: 26px;
 }
+
+.bg-input-grey>.select2-container.select2-container--default.select2-container--open, .select2-container--open .select2-dropdown{
+   transition: 0.5s all ease;
+}
+
 
 .tab-content .bg-input-grey input,
 .stepper .bg-input-grey input {
